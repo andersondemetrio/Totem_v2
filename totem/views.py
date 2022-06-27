@@ -24,6 +24,18 @@ def index_totem(request):
     }
     return render(request,"index.html", context=dados)
 
+def index(request):
+    if request.method =="POST":
+        forms = TotemForm(request.POST)
+        if forms.is_valid():
+            forms.save()
+    
+    contatos = Totem.objects.all()
+    dados = {
+        "contatos":contatos
+    }
+    return render(request,"teste.html", context=dados)    
+
 def index_criacao(request):
     forms = TotemForm()
     dados = {

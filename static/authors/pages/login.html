@@ -3,7 +3,7 @@
 
 
 <div class="main-content  container">
-    <h2> Cadastro de Usuário</h2>
+    <h2> Login</h2>
 
     {% if messages %}
     <div class="main-content center container messages-container">
@@ -15,7 +15,7 @@
     </div>
     {% endif %}
 
-    <form action="{% url 'authors:register_create' %}" method="POST">
+    <form action="{% url 'index_totem' %}" method="POST">
         {%csrf_token %}
         <div class="form-content form-content-grid">
             {%for field in form %}
@@ -33,11 +33,17 @@
             {% endfor%}
         </div>
             <div class="button">
-                <button >Enviar
+                <button >Entrar
 
                 </button>
             </div>
     </form>
+
+                <div class="button">
+                <button >Criar usuário
+
+                </button>
+            </div>
 </div>
 
 {% endblock conteudo %}
