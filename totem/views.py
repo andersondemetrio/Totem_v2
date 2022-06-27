@@ -6,11 +6,13 @@ from django.views.decorators.csrf import csrf_exempt
 
 from totem.forms import TotemForm
 from totem.models import Totem
+from django.contrib.auth import get_user_model
+
 
 # Create your views here.
 
 
-def index_agenda(request):
+def index_totem(request):
     if request.method =="POST":
         forms = TotemForm(request.POST)
         if forms.is_valid():
@@ -30,9 +32,9 @@ def index_criacao(request):
     return render(request,"index_criacao.html",context=dados)
 
 def index_contato(request, id_contato):
-    contato = Totem.objects.filter(id=id_contato).first()
+    contatos = Totem.objects.filter(id=id_contato).first()
     dados = {
-        "contato":contato
+        "contatos":contatos
     }
     return render(request, "index_contato.html", context=dados)
 
@@ -42,7 +44,7 @@ def update_contato(request, id_contato):
         contato.paciente =request.POST["paciente"]
         contato.senha =request.POST["senha"]
         contato.sala =request.POST["sala"]
-        contato.data =request.POST.get["data"]
+       # contato.data =request.POST.get["data"]
         contato.save()
         contato = Totem.objects.all()
         dados = {
@@ -62,5 +64,3 @@ def delete_contato(request,id_contato):
         "contatos":contatos
     }
     return render(request, "index.html", context=dados)
-    
-    

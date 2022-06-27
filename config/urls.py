@@ -16,14 +16,14 @@ Including another URLconf
 import authors
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+
 from django.urls import include, path
-from totem.views import (delete_contato, index_agenda, index_contato,
-                         index_criacao, update_contato)
+from totem.views import (delete_contato, index_totem, index_contato,index_criacao, update_contato)
+                         
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index_agenda, name="index"),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('',index_totem, name="index"),
     path('criar/', index_criacao, name = "index_criacao"),
     path('contato/<int:id_contato>', index_contato, name="index_contato"),
     path('update/<int:id_contato>', update_contato, name="update_contato"),

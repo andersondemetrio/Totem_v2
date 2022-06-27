@@ -53,6 +53,17 @@
         background: var(--color-primary-dark);
         color: var(--color-white);
     }
+    .button {
+ font-family: inherit;
+ font-size: 15px;
+ background: green;
+ color: white;
+ padding: 0.7em 1em;
+ padding-left: 0.9em;
+ align-items: center;
+ border-radius: 16px;
+ display: inline-block;
+}
 </style>
 
 <body>
@@ -67,11 +78,7 @@
             </ul>
         </div>
     </nav>
-    {% block conteudo %}
-    {% endblock conteudo %}
-    {% block conteudo2 %}
 
-    {% endblock conteudo2 %}
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">

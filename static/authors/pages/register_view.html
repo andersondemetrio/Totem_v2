@@ -1,8 +1,20 @@
 {% include 'loguin.html' %}
 {% block conteudo %}
 
+
 <div class="main-content  container">
     <h2> Cadastro de Usuário</h2>
+
+    {% if messages %}
+    <div class="main-content center container messages-container">
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <form action="{% url 'authors:create' %}" method="POST">
         {%csrf_token %}
         <div class="form-content form-content-grid">
@@ -20,13 +32,11 @@
             </div>
             {% endfor%}
         </div>
-        <div class="form-content button">
-            <div class="form-content button">
-                <button type="submit">Enviar
+            <div class="button">
+                <button >Enviar
 
                 </button>
             </div>
-        </div>
     </form>
 </div>
 
