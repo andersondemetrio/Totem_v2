@@ -63,4 +63,8 @@ def delete_contato(request,id_contato):
     dados = {
         "contatos":contatos
     }
+<<<<<<< HEAD
     return render(request, "index.html", context=dados)
+=======
+    return render(request, "index.html", context=dados)
+>>>>>>> 98b66c46b5f50ce209aada250ca878c2297a1fbc
