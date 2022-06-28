@@ -2,7 +2,7 @@
 {% block conteudo %}
 
 <div class="container">
-    <form action= {% url 'index_totem' %} method="post" >
+    <form action= {% url 'index' %} method="post" >
         <table class = "table" id="tabela">
             {{forms}}
             {% csrf_token %} 
