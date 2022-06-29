@@ -1,4 +1,11 @@
-:root {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* :root {
     --color-primary: #269fe6;
     --color-primary-hover: #2086c2;
     --color-primary-dark: #13141f;
@@ -42,11 +49,7 @@
     --spacing-gutter-large: 4rem;
   }
   
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  
   
   html {
     font-size: 62.5%;
@@ -320,10 +323,10 @@
   
   .pagination .page-current {
     background: var(--color-primary-dark);
-  }
+  } */
   
   /* Forms */
-  .form-content {
+  /* .form-content {
     max-width: 64rem;
     margin: 0 auto;
     margin-bottom: var(--spacing-gutter-medium);
@@ -379,10 +382,10 @@
     cursor: pointer;
     color: var(--color-primary);
     font-size: 1.6rem;
-  }
+  } */
   
   /* Messages */
-  .messages-container {
+  /* .messages-container {
     display: flex;
     flex-flow: column nowrap;
     gap: calc(var(--spacing-gutter-medium) / 2);
@@ -430,10 +433,10 @@
     border: 1px solid var(--color-debug-dark);
     background: var(--color-debug-light);
     color: var(--color-debug-dark);
-  }
+  } */
   
   /* Authors */
-  .login-message {
+  /* .login-message {
     margin: 1rem 0;
   }
   
@@ -449,10 +452,10 @@
   .authors-dashboard-container ul {
     list-style-type: none;
     margin: 1rem 0;
-  }
+  } */
   
   /* Generics */
-  
+/*   
   .center {
     text-align: center;
   }
@@ -547,4 +550,4 @@
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
   }
-  
+   */
