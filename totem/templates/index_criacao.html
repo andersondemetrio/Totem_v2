@@ -2,22 +2,25 @@
 {% block conteudo %}
 
 <div class="container">
+
+
+<h2>Adicionar Senha</h2>
+
     <form action= {% url 'index' %} method="post" >
 
         <div class="criacao">
+
             <table class = "table" id="tabela">
+
             {{forms}}
             {% csrf_token %} 
-            <tr>
-                <td>
-                    <button type="submit" class="btn btn-primary">Criar</button>
-                </td>
-            </tr>
-        </table>
+            </table>
 
-        </div>
+            <button type="submit" style="text-align: center;" class="btn btn-primary">Criar</button>
 
-        
+        </div>        
     </form>
+
 </div>
+
 {% endblock conteudo  %}
