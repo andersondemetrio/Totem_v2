@@ -16,7 +16,7 @@ tr{
   align-items: center;
   margin-left: 25%;
   margin-right: 25%;
-  box-shadow: 4px 4px 4px 4px rgba(1, 1, 1, 0.25);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 10px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
   border-radius: 2%;
   padding: 45px;
   margin-top: 50px;
@@ -28,7 +28,7 @@ tr{
   align-items: center;
   margin-left: 25%;
   margin-right: 25%;
-  box-shadow: 4px 4px 4px 4px rgba(1, 1, 1, 0.25);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 10px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
   padding: 45px;
   margin-top: 50px;
   justify-content: center;
@@ -37,6 +37,7 @@ tr{
 
 h2{
   text-align: center;
+  padding-bottom: 30px;
  
 }
 
@@ -52,8 +53,7 @@ form{
   padding: 25px;
 }
 
-.teste{
-  
+.teste{  
   align-items: center;
   margin-left: 25%;
   margin-right: 25%;
@@ -61,8 +61,6 @@ form{
   padding: 45px;
   margin-top: 50px;
   margin-bottom: 50px;
-  
-
 }
 
 
@@ -81,6 +79,34 @@ form{
 
 #id_first_name{
   margin: 25px;
+}
+
+#id_last_name{
+  margin: 25px;
+}
+
+#id_username{
+  margin: 25px;
+
+}
+
+#id_email{
+  margin: 25px;
+
+}
+
+#id_password{
+  margin: 25px;
+
+}
+
+#id_password2{
+  margin: 25px;
+
+}
+
+.help-texte{
+  color: rgb(86, 168, 193);
 }
 
 
