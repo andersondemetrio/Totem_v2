@@ -1,27 +1,30 @@
 {% include "base.html" %}
 {% block conteudo  %}
-<div style="padding: 30px">
-<h1>{{contato.id}}</h1>
+<div style="padding: 15px">
+<h2>Id da senha:  {{contato.id}}</h2>
 <form action={% url 'update_contato' contato.id %} method="post">
     {% csrf_token %}
-<div class="input-group mb-3">
+
+    <div class="update">
+    <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">paciente</span>
+      <span class="input-group-text" id="inputGroup-sizing-default">Paciente</span>
     </div>
     <input type="text" class="form-control" name="paciente" value="{{contato.paciente}}">
   </div>
-<div class="input-group mb-3">
+  <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">senha</span>
+      <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
     </div>
     <input type="text" class="form-control" name="senha" value="{{contato.senha}}"><br>
 </div>
 <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">sala</span>
+      <span class="input-group-text" id="inputGroup-sizing-default">Sala</span>
     </div>
     <input type="text" class="form-control" name="sala" value="{{contato.sala}}"><br>
 </div>
-<button type="submit" class="btn btn-primary">Salvar</button>
+<button type="submit" id="botaoupdate" class="btn btn-primary">Salvar</button>    
 </form>
+</div>
 {% endblock conteudo %}

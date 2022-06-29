@@ -3,7 +3,9 @@
 
 <div class="container">
     <form action= {% url 'index' %} method="post" >
-        <table class = "table" id="tabela">
+
+        <div class="criacao">
+            <table class = "table" id="tabela">
             {{forms}}
             {% csrf_token %} 
             <tr>
@@ -12,6 +14,10 @@
                 </td>
             </tr>
         </table>
+
+        </div>
+
+        
     </form>
 </div>
 {% endblock conteudo  %}
