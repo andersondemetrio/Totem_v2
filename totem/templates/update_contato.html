@@ -1,11 +1,13 @@
 {% include "base.html" %}
 {% block conteudo  %}
 <div style="padding: 15px">
-<h2>Id da senha:  {{contato.id}}</h2>
 <form action={% url 'update_contato' contato.id %} method="post">
     {% csrf_token %}
 
+
     <div class="update">
+      <h2>Edição do ID:  {{contato.id}}</h2>
+
     <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-default">Paciente</span>

@@ -21,12 +21,12 @@
       <td><a href="{%url 'index_contato' c.id %}"> {{c.senha}}</a></td> 
       <td><a href="{%url 'index_contato' c.id %}"> {{c.sala}}</a></td> 
       <td><a href="{%url 'index_contato' c.id %}"> {{c.data|date:'d/m/Y'}}</a></td> 
-      <td><a href="{%url 'update_contato' c.id %}"> editar</a></td>
+      <td><a href="{%url 'update_contato' c.id %}" class="btn btn-warning"> Editar</a></td>
       <td> <form method="post" action="">
           {% csrf_token %}
             <p>Deseja Excluir o Item?</p><br>
-             <a href= "{%url 'delete_contato' c.id %}"> Sim</a>
-            <a href="{%url 'index'%}"><div class="btn btn-primary">Cancelar</div></a>
+             <a href= "{%url 'delete_contato' c.id %}" class="btn btn-danger"> Sim</a>
+            <a href="{%url 'index_totem'%}"><div class="btn btn-primary">Cancelar</div></a>
           </td>
        </form>
       </td> 

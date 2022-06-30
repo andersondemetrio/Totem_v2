@@ -3,47 +3,52 @@
 
 
 <div class="main-content  container">
-    <h2> Login</h2>
 
-    {% if messages %}
-    <div class="main-content center container messages-container">
-        {% for message in messages %}
-            <div class="message {{ message.tags }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    </div>
-    {% endif %}
+    <div class="login">
 
-    <form action="{% url 'index_totem' %}" method="POST">
-        {%csrf_token %}
-        <div class="form-content form-content-grid">
-            {%for field in form %}
-            <div class="form-group">
-                <label for="{{field.id_for_label}}"> {{field.label}}
-                    {{field}}
-                </label>
-                {%if field.help_text %}
-                <p class="help-texte">{{field.help_text}} </p>
-                {% endif%}
+        <h2> Login</h2>
 
-                {{field.erros}}
-
-            </div>
-            {% endfor%}
+        {% if messages %}
+        <div class="main-content center container messages-container">
+            {% for message in messages %}
+                <div class="message {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
         </div>
-            <div class="button">
-                <button >Entrar
+        {% endif %}
+    
+        <form action="{% url 'index_totem' %}" method="POST">
+            {%csrf_token %}
+            <div class="form-content form-content-grid">
+                {%for field in form %}
+                <div class="form-group">
+                    <label for="{{field.id_for_label}}"> {{field.label}}
+                        {{field}}
+                    </label>
+                    {%if field.help_text %}
+                    <p class="help-texte">{{field.help_text}} </p>
+                    {% endif%}
+    
+                    {{field.erros}}
+    
+                </div>
 
-                </button>
-            </div>
-    </form>
+                {% endfor%}
 
                 <div class="button">
-               <button >
-                <a href="http://127.0.0.1:8000/authors/register/">Criar Usuário</a>
-                </button>
-            </div>
-</div>
+                    <button style="text-align: center;" class="btn btn-primary">Entrar </button>
+                </div>
 
+                                
+                </div>
+
+                
+        </form>
+    
+                    
+    </div>
+    
+    </div>
+    
 {% endblock conteudo %}
